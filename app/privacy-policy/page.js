@@ -81,9 +81,11 @@ export default function PrivacyPolicyPage() {
             <h2>Third parties</h2>
             <p>
               We use third-party service providers — including Airtable (data storage),
-              Vercel (website hosting) and email delivery providers — to operate our website
-              and respond to enquiries. These providers process data on our behalf under
-              their own privacy and security terms.
+              Vercel (website hosting), Google Tag Manager (tag and analytics management)
+              and email delivery providers — to operate our website and respond to
+              enquiries. These providers process data on our behalf under their own privacy
+              and security terms. See our <a href="/cookie-policy">Cookie Policy</a> for more
+              on how Google Tag Manager is used.
             </p>
 
             <h2>Changes to this policy</h2>

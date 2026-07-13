@@ -30,18 +30,38 @@ export default function CookiePolicyPage() {
             </p>
 
             <h2>How we use cookies</h2>
-            <p>wowfootball.group currently uses cookies for the following purposes:</p>
+            <p>wowfootball.group uses Google Tag Manager (GTM), which allows us to manage
+              tracking and marketing tags on the site. GTM itself can set cookies, and it's
+              also used to deploy other tools (such as analytics) that may set their own
+              cookies. Broadly, cookies on this site fall into these categories:</p>
             <ul>
               <li>
                 <strong>Essential cookies</strong> — required for the website to function
                 correctly (for example, remembering your cookie preferences).
               </li>
               <li>
-                <strong>Analytics cookies</strong> — help us understand how visitors use our
-                site, so we can improve it. [Update once an analytics tool, e.g. Vercel
-                Analytics or Google Analytics, is confirmed.]
+                <strong>Analytics and marketing cookies</strong> — deployed via Google Tag
+                Manager to help us understand how visitors use the site and to measure the
+                performance of our marketing. [Update this list once specific tags — e.g.
+                Google Analytics — are published in the GTM container, so it accurately
+                reflects what's live.]
               </li>
             </ul>
+
+            <h2>Google Tag Manager</h2>
+            <p>
+              Google Tag Manager is a tag management system. It does not itself collect
+              personal data, but it's used to deploy other tags (such as analytics) that may.
+              You can find out more about how Google handles data in Tag Manager at{" "}
+              <a
+                href="https://support.google.com/tagmanager/answer/9323295"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google&rsquo;s Tag Manager privacy documentation
+              </a>
+              .
+            </p>
 
             <h2>Managing cookies</h2>
             <p>
