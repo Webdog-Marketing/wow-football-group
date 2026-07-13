@@ -132,3 +132,16 @@ update are:
 - `app/layout.js` — swap the Google Fonts imports for your chosen typefaces
 - `components/Header.js` / `components/Footer.js` — the `LogoMark` SVG (currently a
   simple crest placeholder)
+
+## 7. Google Tag Manager
+
+GTM (container `GTM-NWN42WP7`) is already wired into `app/layout.js` for every page —
+the container ID is set once, near the top of that file, as `const GTM_ID`. It's
+implemented with Next.js's own `next/script` component using the `beforeInteractive`
+strategy, which is Next.js's supported way of loading a script as early as possible
+(functionally equivalent to Google's "high in `<head>`" instruction), plus a
+server-rendered `<noscript>` fallback immediately after `<body>` — matching Google's
+snippet exactly, just adapted to Next.js's App Router.
+
+Once the site is live, verify it's firing correctly using GTM's **Preview** mode, or the
+Tag Assistant browser extension.
