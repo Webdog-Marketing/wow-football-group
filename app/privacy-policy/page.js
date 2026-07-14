@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
               multi-club football advisory group. This policy explains how we collect, use
               and protect personal data when you visit wowfootball.group or contact us
               directly. If you have any questions, email{" "}
-              <a href="mailto:contact@wowfootball.group">contact@wowfootball.group</a>.
+              <a href="mailto:team@wowfootball.group">team@wowfootball.group</a>.
             </p>
 
             <h2>Information we collect</h2>
@@ -75,7 +75,7 @@ export default function PrivacyPolicyPage() {
             <p>
               Depending on where you live, you may have the right to access, correct, delete
               or object to our use of your personal data. To exercise these rights, email{" "}
-              <a href="mailto:contact@wowfootball.group">contact@wowfootball.group</a>.
+              <a href="mailto:team@wowfootball.group">team@wowfootball.group</a>.
             </p>
 
             <h2>Third parties</h2>
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
             <h2>Contact us</h2>
             <p>
               If you have questions about this policy, email{" "}
-              <a href="mailto:contact@wowfootball.group">contact@wowfootball.group</a>.
+              <a href="mailto:team@wowfootball.group">team@wowfootball.group</a>.
             </p>
           </div>
         </div>

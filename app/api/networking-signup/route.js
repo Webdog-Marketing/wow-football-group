@@ -38,7 +38,7 @@ export async function POST(request) {
   } catch (err) {
     console.error(err);
     return NextResponse.json(
-      { error: "Something went wrong submitting your details. Please email us directly at contact@wowfootball.group." },
+      { error: "Something went wrong submitting your details. Please email us directly at team@wowfootball.group." },
       { status: 500 }
     );
   }

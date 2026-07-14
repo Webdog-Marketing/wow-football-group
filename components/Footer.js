@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Get in touch</h4>
             <ul>
-              <li><a href="mailto:contact@wowfootball.group">contact@wowfootball.group</a></li>
+              <li><a href="mailto:team@wowfootball.group">team@wowfootball.group</a></li>
             </ul>
             <div style={{ marginTop: "1.25rem" }}>
               <a

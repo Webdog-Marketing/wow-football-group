@@ -33,7 +33,7 @@ export default function JoinUsPage() {
               </ul>
               <p className="form-note" style={{ marginTop: "2rem" }}>
                 Prefer to email directly? Reach us at{" "}
-                <a href="mailto:contact@wowfootball.group">contact@wowfootball.group</a>.
+                <a href="mailto:team@wowfootball.group">team@wowfootball.group</a>.
               </p>
             </div>
 

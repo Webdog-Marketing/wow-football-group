@@ -87,7 +87,7 @@ export default function CookiePolicyPage() {
             <h2>Contact us</h2>
             <p>
               Questions about this policy can be sent to{" "}
-              <a href="mailto:contact@wowfootball.group">contact@wowfootball.group</a>.
+              <a href="mailto:team@wowfootball.group">team@wowfootball.group</a>.
             </p>
           </div>
         </div>
