@@ -210,7 +210,13 @@ export default function HomePage() {
           <div className="team-grid">
             {team.map((person) => (
               <div className="team-card" key={person.name}>
-                <div className="team-avatar">{person.initials}</div>
+                <div className="team-avatar">
+                  {person.photo ? (
+                    <img src={person.photo} alt={person.name} />
+                  ) : (
+                    person.initials
+                  )}
+                </div>
                 <div>
                   <h3>{person.name}</h3>
                   <span className="team-role">{person.role}</span>
