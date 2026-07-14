@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { countryCodes } from "../data/countryCodes";
 
 const initialState = {
   name: "",
   email: "",
   club: "",
   role: "",
+  whatsappCode: "+44",
   whatsapp: "",
   message: "",
   website: "", // honeypot
@@ -28,7 +30,12 @@ export default function NetworkingForm() {
       const res = await fetch("/api/networking-signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          whatsapp: form.whatsapp.trim()
+            ? `${form.whatsappCode} ${form.whatsapp.trim()}`
+            : "",
+        }),
       });
       const data = await res.json();
 
@@ -92,14 +99,28 @@ export default function NetworkingForm() {
 
       <div className="field">
         <label htmlFor="net-whatsapp">WhatsApp number *</label>
-        <input
-          id="net-whatsapp"
-          type="tel"
-          required
-          placeholder="+44 7XXX XXXXXX"
-          value={form.whatsapp}
-          onChange={update("whatsapp")}
-        />
+        <div className="phone-row">
+          <select
+            id="net-whatsappCode"
+            aria-label="Country code"
+            value={form.whatsappCode}
+            onChange={update("whatsappCode")}
+          >
+            {countryCodes.map((c) => (
+              <option key={c.name} value={c.dial}>
+                {c.dial} {c.name}
+              </option>
+            ))}
+          </select>
+          <input
+            id="net-whatsapp"
+            type="tel"
+            required
+            placeholder="7XXX XXXXXX"
+            value={form.whatsapp}
+            onChange={update("whatsapp")}
+          />
+        </div>
       </div>
 
       <div className="field">

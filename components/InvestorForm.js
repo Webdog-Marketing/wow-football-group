@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { countryCodes } from "../data/countryCodes";
 
 const initialState = {
   name: "",
   email: "",
+  phoneCode: "+44",
   phone: "",
   organisation: "",
   investmentRange: "",
@@ -28,7 +30,10 @@ export default function InvestorForm() {
       const res = await fetch("/api/investor-enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          phone: form.phone.trim() ? `${form.phoneCode} ${form.phone.trim()}` : "",
+        }),
       });
       const data = await res.json();
 
@@ -76,7 +81,21 @@ export default function InvestorForm() {
       <div className="field-row">
         <div className="field">
           <label htmlFor="phone">Phone</label>
-          <input id="phone" type="tel" value={form.phone} onChange={update("phone")} />
+          <div className="phone-row">
+            <select
+              id="phoneCode"
+              aria-label="Country code"
+              value={form.phoneCode}
+              onChange={update("phoneCode")}
+            >
+              {countryCodes.map((c) => (
+                <option key={c.name} value={c.dial}>
+                  {c.dial} {c.name}
+                </option>
+              ))}
+            </select>
+            <input id="phone" type="tel" value={form.phone} onChange={update("phone")} />
+          </div>
         </div>
         <div className="field">
           <label htmlFor="organisation">Organisation</label>
