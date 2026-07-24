@@ -1,21 +1,20 @@
 :root {
-  --ink: #122019;
-  --pitch-900: #0d251b;
-  --pitch-800: #123324;
-  --pitch-700: #17422f;
-  --pitch-600: #1f5138;
+  --ink: #0d231b;
+  --pitch-900: #0d231b;
+  --pitch-800: #133428;
+  --pitch-700: #1b4838;
+  --pitch-600: #235f49;
   --paper: #f1ede0;
   --paper-dim: #e7e0cd;
-  --paper-line: rgba(18, 32, 25, 0.14);
+  --paper-line: rgba(13, 35, 27, 0.14);
   --white: #fffdf8;
-  --gold: #c69a2b;
-  --gold-bright: #e6bc4a;
-  --gold-dim: rgba(198, 154, 43, 0.18);
+  --gold: #dfb749;
+  --gold-bright: #e6c670;
+  --gold-dim: rgba(223, 183, 73, 0.18);
   --danger: #a13a2f;
 
-  --font-display: "Instrument Serif", "Times New Roman", serif;
-  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  /* --font-display and --font-body are injected by next/font (see app/layout.js) */
+  --font-mono: var(--font-display);
 
   --container: 1180px;
   --radius: 2px;
@@ -57,6 +56,7 @@ a {
   padding: 0.75rem 1.25rem;
   z-index: 1000;
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.8rem;
 }
 
@@ -83,14 +83,15 @@ a {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 400;
-  line-height: 1.05;
+  font-weight: 800;
+  line-height: 1.08;
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 h1 {
-  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 4.8vw, 4.4rem);
 }
 
 h2 {
@@ -107,6 +108,7 @@ p {
 
 .eyebrow {
   font-family: var(--font-mono);
+  font-weight: 700;
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -127,7 +129,6 @@ p {
 .lede {
   font-size: clamp(1.05rem, 1.6vw, 1.25rem);
   max-width: 46ch;
-  color: var(--ink);
   opacity: 0.82;
 }
 
@@ -190,6 +191,7 @@ p {
   align-items: center;
   gap: 0.6rem;
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -254,21 +256,24 @@ p {
 }
 
 .logo {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: 0.06em;
   text-decoration: none;
-  color: var(--white);
   display: flex;
-  align-items: center;
-  gap: 0.55rem;
+  align-items: baseline;
+  gap: 0.6rem;
 }
 
-.logo-mark {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
+.logo-mark-img {
+  height: 26px;
+  width: auto;
+  align-self: center;
+}
+
+.logo-descriptor {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--gold-bright);
+  letter-spacing: -0.005em;
 }
 
 .nav-desktop {
@@ -279,6 +284,7 @@ p {
 
 .nav-desktop a {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.76rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -321,6 +327,7 @@ p {
   text-decoration: none;
   color: var(--white);
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -367,6 +374,7 @@ p {
 
 .hero-copy h1 em {
   font-style: italic;
+  font-weight: 900;
   color: var(--gold-bright);
 }
 
@@ -404,6 +412,7 @@ p {
 
 .hero-stat .num {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
   color: var(--gold-bright);
   display: block;
@@ -411,6 +420,7 @@ p {
 
 .hero-stat .label {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.68rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -503,6 +513,7 @@ p {
 
 .pillar-tag {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -531,6 +542,7 @@ p {
 
 .reason-row .tag {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -571,6 +583,7 @@ p {
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.85rem;
   overflow: hidden;
 }
@@ -589,6 +602,7 @@ p {
 
 .club-meta {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.75rem;
   opacity: 0.65;
 }
@@ -622,6 +636,13 @@ p {
   font-family: var(--font-display);
   font-size: 1.5rem;
   border: 1px solid rgba(230, 188, 74, 0.4);
+  overflow: hidden;
+}
+
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .team-card h3 {
@@ -632,6 +653,7 @@ p {
 
 .team-role {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -643,6 +665,7 @@ p {
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.72rem;
   text-decoration: none;
   color: rgba(255, 253, 248, 0.7);
@@ -710,6 +733,7 @@ p {
 
 .news-date {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -719,7 +743,21 @@ p {
 .news-card h3 {
   font-family: var(--font-display);
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 800;
+}
+
+.news-read-more {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--pitch-600);
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.news-card:hover .news-read-more {
+  color: var(--gold);
 }
 
 .empty-state {
@@ -727,6 +765,7 @@ p {
   padding: 3rem 2rem;
   text-align: center;
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.85rem;
   color: rgba(18, 32, 25, 0.55);
 }
@@ -741,6 +780,20 @@ p {
 
 .page-hero .lede {
   max-width: 56ch;
+}
+
+.back-link {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--gold-bright);
+  display: inline-block;
+}
+
+.back-link:hover {
+  color: var(--white);
 }
 
 /* ---------- Forms ---------- */
@@ -772,6 +825,7 @@ p {
 
 .field label {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -809,6 +863,33 @@ p {
   }
 }
 
+.phone-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.phone-row select {
+  flex: 0 0 auto;
+  width: 6.5rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.8rem 0.5rem;
+  border: 1px solid var(--paper-line);
+  background: var(--paper);
+  border-radius: var(--radius);
+  color: var(--ink);
+}
+
+.phone-row select:focus {
+  background: var(--white);
+  border-color: var(--gold);
+}
+
+.phone-row input {
+  flex: 1;
+}
+
 .form-note {
   font-size: 0.85rem;
   opacity: 0.65;
@@ -817,6 +898,7 @@ p {
 
 .form-status {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.82rem;
   padding: 0.9rem 1rem;
   margin-top: 1rem;
@@ -885,6 +967,7 @@ p {
 
 .legal-updated {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.78rem;
   color: rgba(18, 32, 25, 0.55);
   margin-bottom: 2.5rem;
@@ -912,12 +995,14 @@ p {
   }
 }
 
-.footer-brand .logo {
-  margin-bottom: 1rem;
+.footer-logo-img {
+  height: 84px;
+  width: auto;
 }
 
 .footer-col h4 {
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -953,6 +1038,7 @@ p {
   gap: 1rem;
   padding-top: 2rem;
   font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 0.72rem;
 }
 
