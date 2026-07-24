@@ -68,6 +68,17 @@ Create a base (e.g. "WOW Football Group") with three tables:
 
 Only tick **Published** when an article should go live — the News page filters on this.
 
+**About the Slug field:** this becomes the article's URL — `wowfootball.group/news/your-slug` —
+and is what each "Read more" card on `/news` links to. Use lowercase words separated by
+hyphens, no spaces or punctuation, e.g. `ks-gornik-brzeszcze-signs-new-partnership`. Keep
+each one unique; if a row's Slug is left blank, the site falls back to Airtable's internal
+record ID, which still works but produces an ugly, non-descriptive URL.
+
+**Body formatting:** the Body field is rendered as plain paragraphs on the article page —
+separate paragraphs with a blank line (double line break) in Airtable and they'll render
+as distinct `<p>` tags. It doesn't currently support rich text (bold, links, images inline,
+headings) — just plain paragraph breaks.
+
 Get your credentials:
 - **API key**: create a [personal access token](https://airtable.com/create/tokens) with
   `data.records:read` and `data.records:write` scopes on your base.

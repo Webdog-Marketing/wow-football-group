@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { getNewsArticles } from "../../lib/airtable";
+import { formatDate } from "../../lib/format";
 
 export const metadata = {
   title: "News | WOW Football Group",
@@ -6,19 +8,6 @@ export const metadata = {
 };
 
 export const revalidate = 60;
-
-function formatDate(dateStr) {
-  if (!dateStr) return "";
-  try {
-    return new Date(dateStr).toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
-  } catch {
-    return dateStr;
-  }
-}
 
 export default async function NewsPage() {
   const articles = await getNewsArticles();
@@ -46,11 +35,16 @@ export default async function NewsPage() {
           ) : (
             <div className="news-grid">
               {articles.map((article) => (
-                <article className="news-card" key={article.id}>
+                <Link
+                  href={`/news/${article.slug}`}
+                  className="news-card"
+                  key={article.id}
+                >
                   {article.date && <span className="news-date">{formatDate(article.date)}</span>}
                   <h3>{article.title}</h3>
                   {article.summary && <p>{article.summary}</p>}
-                </article>
+                  <span className="news-read-more">Read more →</span>
+                </Link>
               ))}
             </div>
           )}

@@ -742,7 +742,21 @@ p {
 .news-card h3 {
   font-family: var(--font-display);
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 800;
+}
+
+.news-read-more {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--pitch-600);
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.news-card:hover .news-read-more {
+  color: var(--gold);
 }
 
 .empty-state {
@@ -765,6 +779,20 @@ p {
 
 .page-hero .lede {
   max-width: 56ch;
+}
+
+.back-link {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--gold-bright);
+  display: inline-block;
+}
+
+.back-link:hover {
+  color: var(--white);
 }
 
 /* ---------- Forms ---------- */
