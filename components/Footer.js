@@ -8,11 +8,14 @@ export default function Footer() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <span className="logo">
-              <LogoMark />
-              WOW Football Group
-            </span>
-            <p style={{ maxWidth: "34ch", fontSize: "0.92rem" }}>
+            <img
+              src="/logo/wow-lockup.png"
+              alt="WOW Football Group"
+              className="footer-logo-img"
+              width={1400}
+              height={643}
+            />
+            <p style={{ maxWidth: "34ch", fontSize: "0.92rem", marginTop: "1.25rem" }}>
               A multi-club football advisory group. Global expertise, local heritage —
               helping ambitious clubs punch above their weight.
             </p>
@@ -58,16 +61,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
-
-function LogoMark() {
-  return (
-    <svg className="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="16" cy="16" r="14.5" stroke="#E6BC4A" strokeWidth="1.2" />
-      <path d="M16 3.5V28.5M3.5 16H28.5" stroke="#E6BC4A" strokeWidth="0.6" opacity="0.5" />
-      <path d="M16 9L20.5 12.2L18.8 17.5H13.2L11.5 12.2L16 9Z" stroke="#E6BC4A" strokeWidth="1.2" strokeLinejoin="round" />
-    </svg>
   );
 }
 

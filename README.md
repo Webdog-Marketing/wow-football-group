@@ -121,17 +121,34 @@ git push -u origin main
   `linkedin.com/company/wow-football-group/`; update if your handle differs.
 - Add articles to the **News Articles** Airtable table whenever you're ready to publish.
 
-## 6. Branding
+## 6. Brand implementation
 
-Colours, type and the tactics-board hero graphic were designed as a placeholder
-direction (deep pitch green, gold accent, editorial serif + mono type) so the site has a
-distinct look from day one. Once your branding document is ready, the easiest places to
-update are:
+The site now uses your actual brand guide (colours, typography, logo):
 
-- `app/globals.css` — all colours are CSS variables at the top of the file (`:root`)
-- `app/layout.js` — swap the Google Fonts imports for your chosen typefaces
-- `components/Header.js` / `components/Footer.js` — the `LogoMark` SVG (currently a
-  simple crest placeholder)
+- **Colours**: exact hex values from the guide — Deep Forest Green `#0d231b` and
+  Gold/Yellow Ochre `#dfb749` — set as CSS variables in `app/globals.css` (`:root`),
+  with a small tonal ramp derived from each for section backgrounds and hover states.
+- **Typography**: Montserrat (weight 700–900, italic for emphasis, matching your
+  logo's "Black Italic" treatment) for headings, and Poppins for body text. Poppins is
+  used as a stand-in for Gotham Book — Gotham itself is a commercial font not available
+  through Google Fonts, so it can't be loaded on the web without a separate licence
+  from Monotype. If you already have a Gotham web licence, it's a straightforward swap
+  in `app/layout.js`.
+- **Logo**: I generated two cropped, transparent PNGs from your `WOW2-01.png` file (the
+  gold-on-green version) — `public/logo/wow-icon.png` (standalone "WOW" mark, used in
+  the header) and `public/logo/wow-lockup.png` (full vertical lockup with "Football
+  Group", used in the footer) — plus a set of favicons (`public/favicon-32.png`,
+  `public/favicon-512.png`, `public/apple-touch-icon.png`).
+
+**One thing worth knowing:** your brand guide documents four approved logo colour
+variants (full-colour on dark, monochrome dark on light, dark-on-mid-grey, and reversed
+white on dark), but only the dark-background gold version was supplied as a usable
+asset — the other file (`WOW2-02.png`) has a solid black background rather than the
+transparent or light background the other variants call for, so it isn't usable as-is
+by the code. This isn't an issue for the current site, since every section using the
+logo has a dark green background — but if you later add a light-background placement
+(printed materials, a light page section, etc.), you'll want the proper green-on-light
+logo file exported from wherever the original guide was designed.
 
 ## 7. Google Tag Manager
 

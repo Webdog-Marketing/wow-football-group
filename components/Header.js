@@ -18,8 +18,14 @@ export default function Header() {
     <header className="site-header">
       <div className="container">
         <Link href="/" className="logo" onClick={() => setOpen(false)}>
-          <LogoMark />
-          WOW Football Group
+          <img
+            src="/logo/wow-icon.png"
+            alt="WOW Football Group"
+            className="logo-mark-img"
+            width={600}
+            height={179}
+          />
+          <span className="logo-descriptor">Football Group</span>
         </Link>
 
         <nav className="nav-desktop" aria-label="Primary">
@@ -60,16 +66,6 @@ export default function Header() {
         </nav>
       )}
     </header>
-  );
-}
-
-function LogoMark() {
-  return (
-    <svg className="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="16" cy="16" r="14.5" stroke="#E6BC4A" strokeWidth="1.2" />
-      <path d="M16 3.5V28.5M3.5 16H28.5" stroke="#E6BC4A" strokeWidth="0.6" opacity="0.5" />
-      <path d="M16 9L20.5 12.2L18.8 17.5H13.2L11.5 12.2L16 9Z" stroke="#E6BC4A" strokeWidth="1.2" strokeLinejoin="round" />
-    </svg>
   );
 }
 

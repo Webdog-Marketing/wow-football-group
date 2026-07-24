@@ -1,4 +1,4 @@
-import { Instrument_Serif, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "../components/Header";
@@ -6,25 +6,18 @@ import Footer from "../components/Footer";
 
 const GTM_ID = "GTM-NWN42WP7";
 
-const display = Instrument_Serif({
+const display = Montserrat({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["700", "800", "900"],
   style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",
 });
 
-const body = IBM_Plex_Sans({
+const body = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-body",
-  display: "swap",
-});
-
-const mono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
   display: "swap",
 });
 
@@ -33,6 +26,13 @@ export const metadata = {
   title: "WOW Football Group | Multi-Club Football Advisory",
   description:
     "WOW Football Group is a multi-club football advisory group. We bring global football expertise to ambitious clubs, helping them punch above their weight — on and off the pitch.",
+  icons: {
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "WOW Football Group",
     description:
@@ -45,7 +45,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
         {/* Google Tag Manager — beforeInteractive hoists this into <head>,
             as high as possible, matching Google's own placement guidance. */}
