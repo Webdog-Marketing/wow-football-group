@@ -40,10 +40,21 @@ export default async function NewsPage() {
                   className="news-card"
                   key={article.id}
                 >
-                  {article.date && <span className="news-date">{formatDate(article.date)}</span>}
-                  <h3>{article.title}</h3>
-                  {article.summary && <p>{article.summary}</p>}
-                  <span className="news-read-more">Read more →</span>
+                  {article.coverImage && (
+                    <img
+                      src={article.coverImage}
+                      alt={article.title}
+                      className="news-card-image"
+                    />
+                  )}
+                  <div className="news-card-body">
+                    {article.date && (
+                      <span className="news-date">{formatDate(article.date)}</span>
+                    )}
+                    <h3>{article.title}</h3>
+                    {article.summary && <p>{article.summary}</p>}
+                    <span className="news-read-more">Read more →</span>
+                  </div>
                 </Link>
               ))}
             </div>
