@@ -50,7 +50,7 @@ export default async function NewsArticlePage({ params }) {
               alt={article.title}
               style={{
                 width: "100%",
-                maxHeight: "480px",
+                aspectRatio: "16 / 9",
                 objectFit: "cover",
                 marginBottom: "2.5rem",
               }}
