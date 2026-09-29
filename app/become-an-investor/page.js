@@ -24,7 +24,7 @@ export default function BecomeInvestorPage() {
         <div className="container">
           <div className="form-layout">
             <div>
-              <h2 style={{ maxWidth: "16ch" }}>Why invest with WOW Football Group</h2>
+              <h2>Why invest with WOW Football Group</h2>
               <ul className="info-list">
                 <li>A team with direct experience across federation building, kit supply and club operations.</li>
                 <li>A model built on genuine club partnerships, not one-off transactions.</li>
