@@ -3,6 +3,8 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FormaConnectorScript from "next/script";
+
 
 const GTM_ID = "GTM-NWN42WP7";
 
@@ -74,7 +76,9 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
-      </body>
+      
+<FormaConnectorScript id="forma-connector" data-forma-connector="1" src="https://formacms.app/visual-cms.js" strategy="afterInteractive" data-editor="https://formacms.app" data-content="/forma/content.json" />
+</body>
     </html>
   );
 }

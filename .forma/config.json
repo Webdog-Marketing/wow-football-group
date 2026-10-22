@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "repository": "Webdog-Marketing/wow-football-group",
+  "root": "",
+  "framework": "Next.js · App Router",
+  "entry": "app/layout.js",
+  "publicDir": "public",
+  "siteUrl": "https://www.wowfootball.group/",
+  "editorOrigin": "https://formacms.app",
+  "contentPath": "public/forma/content.json"
+}
