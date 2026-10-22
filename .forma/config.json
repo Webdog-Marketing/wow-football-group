@@ -7,5 +7,6 @@
   "publicDir": "public",
   "siteUrl": "https://www.wowfootball.group/",
   "editorOrigin": "https://formacms.app",
-  "contentPath": "public/forma/content.json"
+  "contentPath": "public/forma/content.json",
+  "liveSiteId": "LS8Ros2TM5Djt6A4jBOl-7UIdfXSfZM4k-dc4ezjDu4"
 }
